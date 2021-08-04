@@ -158,6 +158,7 @@ else
 			--pull \
 			--load \
 			--platform linux/$$arch \
+			--build-arg=BUILD_TYPE=outside \
 			-t $(DOCKER_IMAGE_NAME)-$${arch}:$(VERSION) \
 			build/docker/linux/$${arch} ;\
 	    docker tag $(DOCKER_IMAGE_NAME)-$${arch}:$(VERSION) $(DOCKER_IMAGE_NAME)-$${arch}:latest ;\

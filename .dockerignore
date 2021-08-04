@@ -1,2 +1,10 @@
-*
-!coredns
+# Docker
+Dockerfile
+.dockerignore
+
+# don't send git context
+#.git (GITCOMMIT isn't a ARG for the moment)
+
+# Don't send configuration changes
+*.md
+*.yaml

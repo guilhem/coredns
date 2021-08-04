@@ -1,12 +1,20 @@
-FROM debian:stable-slim
+ARG BUILD_TYPE=multi-stage
 
-RUN apt-get update && apt-get -uy upgrade
-RUN apt-get -y install ca-certificates && update-ca-certificates
+FROM golang:1.16 as build-multi-stage
 
-FROM scratch
+WORKDIR /app
+COPY . .
+RUN make
 
-COPY --from=0 /etc/ssl/certs /etc/ssl/certs
-ADD coredns /coredns
+FROM scratch as build-outside
+
+COPY coredns /app/coredns
+
+FROM build-${BUILD_TYPE} AS after-condition
+
+FROM gcr.io/distroless/static
+
+COPY --from=after-condition /app/coredns /coredns
 
 EXPOSE 53 53/udp
 ENTRYPOINT ["/coredns"]
