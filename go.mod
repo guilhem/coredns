@@ -6,16 +6,14 @@ require (
 	github.com/Azure/azure-sdk-for-go v53.3.0+incompatible
 	github.com/Azure/go-autorest/autorest v0.11.18
 	github.com/Azure/go-autorest/autorest/azure/auth v0.5.7
-	github.com/Azure/go-autorest/autorest/to v0.2.0 // indirect
-	github.com/DataDog/datadog-go v3.5.0+incompatible // indirect
 	github.com/apparentlymart/go-cidr v1.1.0
 	github.com/aws/aws-sdk-go v1.38.45
+	github.com/coredns/alternate v0.0.0-20201105225029-f0d10f2aa3aa
 	github.com/coredns/caddy v1.1.0
 	github.com/dnstap/golang-dnstap v0.4.0
 	github.com/farsightsec/golang-framestream v0.3.0
 	github.com/golang/protobuf v1.5.2
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645
-	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/imdario/mergo v0.3.12 // indirect
 	github.com/infobloxopen/go-trees v0.0.0-20200715205103-96a057b8dfb9
 	github.com/matttproud/golang_protobuf_extensions v1.0.1
